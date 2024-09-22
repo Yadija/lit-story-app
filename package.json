@@ -31,5 +31,10 @@
     "webpack-cli": "5.0.0",
     "webpack-dev-server": "4.11.1",
     "webpack-merge": "5.8.0"
+  },
+  "dependencies": {
+    "@popperjs/core": "2.11.6",
+    "bootstrap": "5.2.2",
+    "bootstrap-icons": "1.10.2"
   }
 }
