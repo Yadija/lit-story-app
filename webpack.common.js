@@ -2,6 +2,12 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
+const htmlWebpackPluginConfig = {
+  templateParameters: {
+    brandName: 'Story App',
+  },
+};
+
 module.exports = {
   entry: {
     app: path.resolve(__dirname, 'src/js/index.js'),
@@ -42,6 +48,7 @@ module.exports = {
       title: 'Dashboard',
       filename: 'index.html',
       template: path.resolve(__dirname, 'src/views/index.html'),
+      ...htmlWebpackPluginConfig,
     }),
 
     new CleanWebpackPlugin(),
