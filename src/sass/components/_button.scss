@@ -1,0 +1,18 @@
+@use '../abstracts/variables' as var;
+@use 'sass:map';
+
+button {
+  padding: 8px 24px;
+  font-size: 16px;
+  font-weight: 500;
+
+  background-color: map.get(var.$color, 'Mineral Green');
+  color: map.get(var.$color, 'Bright Gold');
+  border-radius: var.$border-radius;
+  border: 2px solid #00000022;
+
+  &:hover {
+    background-color: map.get(var.$color, 'Bright Gold');
+    color: map.get(var.$color, 'Mineral Green');
+  }
+}
