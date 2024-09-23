@@ -1,3 +1,5 @@
+import './About';
+
 import './Navigation';
 import './Offcanvas';
 

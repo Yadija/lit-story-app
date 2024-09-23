@@ -7,3 +7,7 @@ body {
   background-color: map.get(var.$color, 'White Lilac');
   font-family: 'Poppins', sans-serif;
 }
+
+h2 {
+  color: map.get(var.$color, 'Mineral Green');
+}

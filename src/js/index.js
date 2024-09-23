@@ -9,9 +9,11 @@ import './components';
 
 // Import pages
 import Dashboard from './pages/dashboard';
+import About from './pages/about';
 
 const routes = {
   '/': Dashboard,
+  '/about.html': About,
 };
 
 const detectRoute = () => routes[window.location.pathname];

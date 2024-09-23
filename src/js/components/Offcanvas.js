@@ -37,7 +37,16 @@ class Offcanvas extends LitWithoutShadowDom {
             aria-label="Close"
           ></button>
         </section>
-        <section class="offcanvas-body"></section>
+        <section class="offcanvas-body">
+          <section class="list-group">
+            <a
+              href="/about.html"
+              class="list-group-item list-group-item-action text-decoration-none"
+            >
+              About
+            </a>
+          </section>
+        </section>
       </section>
     `;
   }
