@@ -3,3 +3,6 @@ import '../sass/main.scss';
 
 // Import bootstrap
 import * as bootstrap from 'bootstrap';
+
+// Import components
+import './components';
