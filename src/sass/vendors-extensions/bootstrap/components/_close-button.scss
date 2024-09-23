@@ -1,0 +1,4 @@
+@use '../../../abstracts/variables' as var;
+@use 'sass:map';
+
+$btn-close-color: map.get(var.$color, 'Bright Gold');
