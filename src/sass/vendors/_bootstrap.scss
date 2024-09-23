@@ -2,6 +2,15 @@
 // Bootstrap
 // ==================================================
 
+// Custom modules
+@use '../vendors-extensions/bootstrap/components/navbar' as navbar;
+
+// Menerapkan/override variables Bootstrap apa pun di sini
+$navbar-light-brand-color: navbar.$brand-light-color;
+$navbar-light-brand-hover-color: navbar.$brand-light-color;
+$navbar-dark-brand-color: navbar.$brand-dark-color;
+$navbar-dark-brand-hover-color: navbar.$brand-dark-color;
+
 //
 // Functions Bootstrap
 //
@@ -11,8 +20,6 @@
 // Variables Bootstrap
 //
 @import '~bootstrap/scss/variables';
-
-// Menerapkan/override variables Bootstrap apa pun di sini
 
 //
 // Configuration Bootstrap
@@ -35,6 +42,8 @@
 
 // components
 @import '~bootstrap/scss/buttons';
+@import '~bootstrap/scss/nav';
+@import '~bootstrap/scss/navbar'; // Requires nav
 
 //
 // Utilities API untuk menghasilkan utility classes

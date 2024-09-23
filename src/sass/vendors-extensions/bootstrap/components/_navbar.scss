@@ -1,0 +1,5 @@
+@use '../../../abstracts/variables' as var;
+@use 'sass:map';
+
+$brand-light-color: map.get(var.$color, 'Bright Gold');
+$brand-dark-color: map.get(var.$color, 'Mineral Green');

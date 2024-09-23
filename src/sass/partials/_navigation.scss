@@ -1,0 +1,12 @@
+@use '../abstracts/variables' as var;
+@use 'sass:map';
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  .navbar {
+    background-color: map.get(var.$color, 'Mineral Green');
+  }
+}
