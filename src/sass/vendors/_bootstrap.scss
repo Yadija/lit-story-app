@@ -3,12 +3,16 @@
 // ==================================================
 
 // Custom modules
+@use '../vendors-extensions/bootstrap/components/card' as card;
 @use '../vendors-extensions/bootstrap/components/close-button' as close-button;
 @use '../vendors-extensions/bootstrap/components/navbar' as navbar;
 @use '../vendors-extensions/bootstrap/components/offcanvas' as offcanvas;
 
 // Menerapkan/override variables Bootstrap apa pun di sini
 $btn-close-color: close-button.$btn-close-color;
+
+$card-border-color: card.$border-color;
+$card-border-radius: card.$border-radius;
 
 $navbar-light-brand-color: navbar.$brand-light-color;
 $navbar-light-brand-hover-color: navbar.$brand-light-color;
@@ -50,6 +54,7 @@ $offcanvas-color: offcanvas.$color;
 // components
 @import '~bootstrap/scss/buttons';
 @import '~bootstrap/scss/close';
+@import '~bootstrap/scss/card';
 @import '~bootstrap/scss/nav';
 @import '~bootstrap/scss/navbar'; // Requires nav
 @import '~bootstrap/scss/offcanvas';

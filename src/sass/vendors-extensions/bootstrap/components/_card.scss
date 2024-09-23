@@ -1,0 +1,5 @@
+@use '../../../abstracts/variables' as var;
+@use 'sass:map';
+
+$border-color: map.get(var.$color, 'Mineral Green');
+$border-radius: 0;

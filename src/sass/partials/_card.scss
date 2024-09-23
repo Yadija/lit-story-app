@@ -1,0 +1,21 @@
+@use '../abstracts/variables' as var;
+@use 'sass:map';
+
+.card {
+  .card-img-top {
+    height: 250px;
+    object-fit: cover;
+  }
+
+  .card-title {
+    color: map.get(var.$color, 'Mineral Green');
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    .card-img-top {
+      height: 200px;
+    }
+  }
+}
