@@ -1,0 +1,15 @@
+@use '../abstracts/variables' as var;
+@use 'sass:map';
+
+#stories {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: var.$gap;
+  padding: 0 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  #stories {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}

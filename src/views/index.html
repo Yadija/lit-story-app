@@ -3,9 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Story App</title>
+    <title><%= htmlWebpackPlugin.options.title %> | Story App</title>
   </head>
   <body>
-    <h1>Welcome to Story App</h1>
+    <header>
+      <nav-bar brandName="<%= brandName %>"></nav-bar>
+    </header>
+
+    <main class="container py-5"></main>
+
+    <footer>
+      <footer-bar brandName="<%= brandName %>"></footer-bar>
+    </footer>
   </body>
 </html>

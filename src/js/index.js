@@ -7,6 +7,15 @@ import * as bootstrap from 'bootstrap';
 // Import components
 import './components';
 
+// Import pages
+import Dashboard from './pages/dashboard';
+
+const routes = {
+  '/': Dashboard,
+};
+
+const detectRoute = () => routes[window.location.pathname];
+
 const initPages = () => {
   const header = document.querySelector('header');
   const main = document.querySelector('main');
@@ -19,4 +28,7 @@ const initPages = () => {
 
 window.addEventListener('DOMContentLoaded', async () => {
   initPages();
+
+  const route = detectRoute();
+  route.init();
 });
