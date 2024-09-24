@@ -15,18 +15,8 @@ class TextareaWithValidation extends LitWithoutShadowDom {
 
   constructor() {
     super();
-    this._checkAvailabilityProperty();
-
     this.rows = 6;
     this.required = false;
-  }
-
-  _checkAvailabilityProperty() {
-    if (!this.hasAttribute('invalidFeedbackMessage')) {
-      throw new Error(
-        `Atribut "invalidFeedbackMessage" harus diterapkan pada elemen ${this.localName}`,
-      );
-    }
   }
 
   render() {
@@ -37,20 +27,37 @@ class TextareaWithValidation extends LitWithoutShadowDom {
         rows=${this.rows || nothing}
         value=${this.value || nothing}
         ?required=${this.required}
-        @input=${(e) => (this.value = e.target.value)}
+        @input=${this._handleInput.bind(this)}
       ></textarea>
 
       ${this._validFeedbackTemplate()}
-      <section class="invalid-feedback">${this.invalidFeedbackMessage}</section>
+      <section class="invalid-feedback" ?hidden=${this.isValid()}>
+        ${this.invalidFeedbackMessage}
+      </section>
     `;
   }
 
-  _validFeedbackTemplate() {
-    if (this.validFeedbackMessage) {
-      return html` <section class="valid-feedback">${this.validFeedbackMessage}</section> `;
-    }
+  _handleInput(event) {
+    this.value = event.target.value;
+    this.requestUpdate();
+  }
 
-    return html``;
+  _validFeedbackTemplate() {
+    return this.validFeedbackMessage
+      ? html`<section class="valid-feedback">${this.validFeedbackMessage}</section>`
+      : nothing;
+  }
+
+  isValid() {
+    return !this.required || (this.value && this.value.trim() !== '');
+  }
+
+  updated(changedProperties) {
+    if (changedProperties.has('invalidFeedbackMessage') && !this.invalidFeedbackMessage) {
+      throw new Error(
+        `Attribute "invalidFeedbackMessage" must be applied to element ${this.localName}`,
+      );
+    }
   }
 }
 
