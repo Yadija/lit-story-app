@@ -19,6 +19,10 @@
 
   .offcanvas-body {
     padding: 0;
+    // for locale picker
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
     .list-group {
       padding: 0;

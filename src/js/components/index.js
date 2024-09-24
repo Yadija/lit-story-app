@@ -12,3 +12,4 @@ import './Footer';
 // form
 import './form/InputImageWithPreview';
 import './form/TextareaWithValidation';
+import './form/LocalePicker';

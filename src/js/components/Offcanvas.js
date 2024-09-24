@@ -51,6 +51,8 @@ class Offcanvas extends LitWithoutShadowDom {
               ${msg('About Us')}
             </a>
           </section>
+
+          <locale-picker class="p-3 mx-auto"></locale-picker>
         </section>
       </section>
     `;
