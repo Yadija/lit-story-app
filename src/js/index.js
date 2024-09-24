@@ -2,6 +2,7 @@
 import '../sass/main.scss';
 
 // Import bootstrap
+// eslint-disable-next-line no-unused-vars
 import * as bootstrap from 'bootstrap';
 
 // Import components

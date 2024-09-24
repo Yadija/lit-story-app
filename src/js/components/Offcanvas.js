@@ -57,12 +57,6 @@ class Offcanvas extends LitWithoutShadowDom {
       </section>
     `;
   }
-
-  _userLogOut(event) {
-    event.preventDefault();
-    Utils.destroyUserToken(Config.USER_TOKEN_KEY);
-    CheckUserAuth.checkLoginState();
-  }
 }
 
 customElements.define('off-canvas', Offcanvas);
