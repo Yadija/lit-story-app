@@ -1,11 +1,17 @@
 import { html } from 'lit';
 import LitWithoutShadowDom from './base/LitWithoutShadowDom';
+import { msg, updateWhenLocaleChanges } from '@lit/localize';
 
 class About extends LitWithoutShadowDom {
+  constructor() {
+    super();
+    updateWhenLocaleChanges(this);
+  }
+
   render() {
     return html`
       <section class="row justify-content-center">
-        <h2 class="text-center">About</h2>
+        <h2 class="text-center">${msg('About Us')}</h2>
 
         <section class="col-md-6">
           <p class="pt-3">

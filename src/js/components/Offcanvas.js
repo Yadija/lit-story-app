@@ -1,5 +1,6 @@
 import { html } from 'lit';
 import LitWithoutShadowDom from './base/LitWithoutShadowDom';
+import { msg, updateWhenLocaleChanges } from '@lit/localize';
 
 class Offcanvas extends LitWithoutShadowDom {
   static properties = {
@@ -8,6 +9,7 @@ class Offcanvas extends LitWithoutShadowDom {
 
   constructor() {
     super();
+    updateWhenLocaleChanges(this);
   }
 
   render() {
@@ -39,14 +41,14 @@ class Offcanvas extends LitWithoutShadowDom {
         </section>
         <section class="offcanvas-body">
           <section class="list-group">
+            <a href="/add.html" class="list-group-item list-group-item-action text-decoration-none">
+              ${msg('Add New Story')}
+            </a>
             <a
               href="/about.html"
               class="list-group-item list-group-item-action text-decoration-none"
             >
-              About
-            </a>
-            <a href="/add.html" class="list-group-item list-group-item-action text-decoration-none">
-              Add Story
+              ${msg('About Us')}
             </a>
           </section>
         </section>
