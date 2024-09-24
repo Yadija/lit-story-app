@@ -33,6 +33,7 @@
     "webpack-merge": "5.8.0"
   },
   "dependencies": {
+    "@lit/localize": "^0.12.2",
     "@popperjs/core": "2.11.6",
     "bootstrap": "5.2.2",
     "bootstrap-icons": "1.10.2",
