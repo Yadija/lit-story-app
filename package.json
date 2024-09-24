@@ -16,6 +16,7 @@
   "devDependencies": {
     "@babel/core": "7.20.2",
     "@babel/preset-env": "7.20.2",
+    "@lit/localize-tools": "^0.8.0",
     "autoprefixer": "10.4.13",
     "babel-loader": "9.1.0",
     "clean-webpack-plugin": "4.0.0",
