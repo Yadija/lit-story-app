@@ -45,6 +45,9 @@ class Offcanvas extends LitWithoutShadowDom {
             >
               About
             </a>
+            <a href="/add.html" class="list-group-item list-group-item-action text-decoration-none">
+              Add Story
+            </a>
           </section>
         </section>
       </section>

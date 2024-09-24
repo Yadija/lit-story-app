@@ -10,10 +10,12 @@ import './components';
 // Import pages
 import Dashboard from './pages/dashboard';
 import About from './pages/about';
+import Add from './pages/add';
 
 const routes = {
   '/': Dashboard,
   '/about.html': About,
+  '/add.html': Add,
 };
 
 const detectRoute = () => routes[window.location.pathname];
