@@ -8,6 +8,21 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
-h2 {
+h2,
+label {
   color: map.get(var.$color, 'Mineral Green');
+}
+
+#loginLink,
+#registerLink {
+  color: map.get(var.$color, 'Mineral Green');
+
+  a {
+    color: map.get(var.$color, 'Mineral Green');
+    font-weight: bold;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
 }

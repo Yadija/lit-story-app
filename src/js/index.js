@@ -12,11 +12,15 @@ import './components';
 import Dashboard from './pages/dashboard';
 import About from './pages/about';
 import Add from './pages/add';
+import Login from './pages/auth/login';
+import Register from './pages/auth/register';
 
 const routes = {
   '/': Dashboard,
   '/about.html': About,
   '/add.html': Add,
+  '/auth/login.html': Login,
+  '/auth/register.html': Register,
 };
 
 const detectRoute = () => routes[window.location.pathname];

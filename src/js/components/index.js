@@ -15,3 +15,7 @@ import './form/InputWithValidation';
 import './form/InputPasswordWithValidation';
 import './form/TextareaWithValidation';
 import './form/LocalePicker';
+
+// auth
+import './auth/Login';
+import './auth/Register';
