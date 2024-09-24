@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+<file target-language="id" source-language="en" original="lit-localize-inputs" datatype="plaintext">
+<body>
+<trans-unit id="s9b8cb7a92258751b">
+  <source>Add New Story</source>
+  <target>Tambah Cerita Baru</target>
+</trans-unit>
+<trans-unit id="s39bba60b440fcf00">
+  <source>required</source>
+  <target>wajib diisi</target>
+</trans-unit>
+<trans-unit id="sf9aee319a006c9b4">
+  <source>Add</source>
+  <target>Tambah</target>
+</trans-unit>
+<trans-unit id="se93cb0c892820b0a">
+  <source>About Us</source>
+  <target>Tentang Kami</target>
+</trans-unit>
+</body>
+</file>
+</xliff>

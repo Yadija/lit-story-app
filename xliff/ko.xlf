@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+<file target-language="ko" source-language="en" original="lit-localize-inputs" datatype="plaintext">
+<body>
+<trans-unit id="se93cb0c892820b0a">
+  <source>About Us</source>
+  <target>우리에 대하여</target>
+</trans-unit>
+<trans-unit id="s9b8cb7a92258751b">
+  <source>Add New Story</source>
+  <target>새 이야기 추가</target>
+</trans-unit>
+<trans-unit id="s39bba60b440fcf00">
+  <source>required</source>
+  <target>필수</target>
+</trans-unit>
+<trans-unit id="sf9aee319a006c9b4">
+  <source>Add</source>
+  <target>추가</target>
+</trans-unit>
+</body>
+</file>
+</xliff>
