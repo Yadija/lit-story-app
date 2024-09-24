@@ -7,3 +7,7 @@ import './Jumbotron';
 import './StoryItem';
 
 import './Footer';
+
+// form
+import './form/InputImageWithPreview';
+import './form/TextareaWithValidation';
