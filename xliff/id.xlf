@@ -18,6 +18,38 @@
   <source>About Us</source>
   <target>Tentang Kami</target>
 </trans-unit>
+<trans-unit id="s67749057edb2586b">
+  <source>Logout</source>
+  <target>Keluar</target>
+</trans-unit>
+<trans-unit id="sc8da3cc71de63832">
+  <source>Login</source>
+  <target>Masuk</target>
+</trans-unit>
+<trans-unit id="sd1f44f1a8bc20e67">
+  <source>Email</source>
+  <target>Email</target>
+</trans-unit>
+<trans-unit id="sf6e1665c7022a1f8">
+  <source>Password</source>
+  <target>Password</target>
+</trans-unit>
+<trans-unit id="scad07cc65ad2fb30">
+  <source>Don't have an account?</source>
+  <target>Belum punya akun?</target>
+</trans-unit>
+<trans-unit id="s2c15b9b13a3e2a80">
+  <source>Register</source>
+  <target>Daftar</target>
+</trans-unit>
+<trans-unit id="sef49aec68fd1dc66">
+  <source>Name</source>
+  <target>Nama</target>
+</trans-unit>
+<trans-unit id="s205b3e04ad286caa">
+  <source>Already have an account?</source>
+  <target>Sudah punya akun?</target>
+</trans-unit>
 </body>
 </file>
 </xliff>

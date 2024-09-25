@@ -58,7 +58,7 @@ class Offcanvas extends LitWithoutShadowDom {
               id="userLogOut"
               class="list-group-item list-group-item-action text-decoration-none"
             >
-              Logout
+              ${msg('Logout')}
             </a>
           </section>
 
