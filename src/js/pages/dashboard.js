@@ -1,3 +1,4 @@
+import Stories from '../network/stories';
 import CheckUserAuth from './auth/check-user-auth';
 
 const Dashboard = {
@@ -8,9 +9,8 @@ const Dashboard = {
   },
 
   async _fetchInitialData() {
-    const response = await fetch('/data/DATA.json');
-    const responseJSON = await response.json();
-    this._stories = responseJSON.listStory;
+    const response = await Stories.getAllStories();
+    this._stories = response.data.listStory;
 
     this.renderStoryCards(this._stories);
   },
@@ -66,8 +66,12 @@ const Dashboard = {
   },
 
   _templateEmptyBodyCard() {
+    const main = document.querySelector('main');
+    main.style.display = 'grid';
+    main.style.placeItems = 'center';
+
     return `
-      <div class="text-center"><h2>Tidak ada list cerita</h2></div>
+      <section class="text-center"><h2>There are no stories</h2></section>
     `;
   },
 };

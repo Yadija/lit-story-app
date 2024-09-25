@@ -1,3 +1,4 @@
+import Stories from '../network/stories';
 import CheckUserAuth from './auth/check-user-auth';
 
 const Add = {
@@ -25,10 +26,15 @@ const Add = {
   async _sendPost() {
     const formData = this._getFormData();
 
-    if (this._validateFormData({ ...formData })) {
-      console.log('Form Data:', formData);
+    if (this._validateFormData(formData)) {
+      const { data, status } = await Stories.addNewStory(formData);
 
-      // this._goToDashboardPage();
+      if (status === 201) {
+        alert(data.message);
+        this._goToDashboardPage();
+      } else {
+        alert(data.message);
+      }
     }
   },
 
