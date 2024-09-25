@@ -19,3 +19,7 @@ import './form/LocalePicker';
 // auth
 import './auth/Login';
 import './auth/Register';
+
+// skeletons
+import './skeletons/JumbotronSkeleton';
+import './skeletons/StoryItemSkeleton';

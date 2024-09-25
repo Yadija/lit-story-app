@@ -1,0 +1,51 @@
+@use '../abstracts/variables' as var;
+@use 'sass:map';
+
+.card {
+  &.skeleton {
+    border: 1px solid #ccc;
+  }
+
+  .skeleton {
+    background-color: #e0e0e0;
+    border-radius: 4px;
+    animation: pulse 1.5s infinite;
+  }
+
+  .card-img-top.skeleton {
+    height: 250px;
+    border-radius: 0;
+  }
+
+  .card-title.skeleton {
+    height: 20px;
+    width: 60%;
+    margin-bottom: 10px;
+  }
+
+  .card-text.skeleton {
+    height: 16px;
+    width: 100%;
+    margin-top: 1rem;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    .card-img-top.skeleton {
+      height: 200px;
+    }
+  }
+}

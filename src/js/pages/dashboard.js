@@ -9,6 +9,8 @@ const Dashboard = {
   },
 
   async _fetchInitialData() {
+    this._showSkeleton();
+
     const response = await Stories.getAllStories();
     this._stories = response.data.listStory;
 
@@ -73,6 +75,19 @@ const Dashboard = {
     return `
       <section class="text-center"><h2>There are no stories</h2></section>
     `;
+  },
+
+  _showSkeleton() {
+    const main = document.querySelector('main');
+    const storiesSkeleton = Array.from({ length: 6 })
+      .map(() => '<story-item-skeleton class="card skeleton"></story-item-skeleton>')
+      .join('');
+
+    main.innerHTML = `
+      <jumbotron-skeleton></jumbotron-skeleton>
+      <section id="stories">
+        ${storiesSkeleton}
+      </section>`;
   },
 };
 
