@@ -1,4 +1,6 @@
+import Config from '../../config/config';
 import Auth from '../../network/auth';
+import Utils from '../../utils/utils';
 import CheckUserAuth from './check-user-auth';
 
 const Login = {
@@ -28,11 +30,12 @@ const Login = {
 
     if (this._validateFormData({ ...formData })) {
       try {
-        await Auth.login({
+        const response = await Auth.login({
           email: formData.email,
           password: formData.password,
         });
 
+        Utils.setUserToken(Config.USER_TOKEN_KEY, response.data.loginResult.token);
         window.alert('Signed user in detected');
         this._goToDashboardPage();
       } catch (error) {
