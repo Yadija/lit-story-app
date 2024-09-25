@@ -41,6 +41,15 @@
           color: map.get(var.$color, 'Mineral Green');
         }
       }
+
+      #userLogOut {
+        color: map.get(var.$color, 'Bittersweet');
+        cursor: pointer;
+
+        &:hover {
+          color: map.get(var.$color, 'ArtyClick Red');
+        }
+      }
     }
   }
 }

@@ -1,6 +1,9 @@
 import { html } from 'lit';
 import LitWithoutShadowDom from './base/LitWithoutShadowDom';
 import { msg, updateWhenLocaleChanges } from '@lit/localize';
+import Utils from '../utils/utils';
+import Config from '../config/config';
+import CheckUserAuth from '../pages/auth/check-user-auth';
 
 class Offcanvas extends LitWithoutShadowDom {
   static properties = {
@@ -50,12 +53,25 @@ class Offcanvas extends LitWithoutShadowDom {
             >
               ${msg('About Us')}
             </a>
+            <a
+              @click=${this._userLogOut}
+              id="userLogOut"
+              class="list-group-item list-group-item-action text-decoration-none"
+            >
+              Logout
+            </a>
           </section>
 
           <locale-picker class="p-3 mx-auto"></locale-picker>
         </section>
       </section>
     `;
+  }
+
+  _userLogOut(event) {
+    event.preventDefault();
+    Utils.destroyUserToken(Config.USER_TOKEN_KEY);
+    CheckUserAuth.checkLoginState();
   }
 }
 
